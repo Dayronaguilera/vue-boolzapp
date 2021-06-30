@@ -33,35 +33,82 @@
     <div id="app">
 
         <div class="bg-boolzapp">
-            <div class="container">
+            <div class="container mt-5">
                 <div class="row">
-                    <div class="col-4 user-aside">
-                        <div class="row">
-                            <h6>
-                                Nome utente
-                                <i class="fas fa-sync-alt"></i>
-                                <i class="fas fa-comment-alt"></i>
-                                <i class="fas fa-ellipsis-v"></i>
-                            </h6>
-                            
-                            <div class="allert-span">
-                                <i class="far fa-bell-slash"></i>
-                                <span>Ricevi notifiche di nuovi messaggi</span>
+
+                    <!-- aside left -->
+                    <div class="col-4 user-aside-container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 user-aside">
+                                <div class="row justify-content-between">
+                                    <div class="col-8 mt-2">
+                                        <div class="container-img">
+                                            <img src="./img/avatar_1.jpg" alt="">
+                                        </div>
+                                        <span class="mx-2">Nome utente</span>
+                                    </div>
+                                    <div class="col-4 icons-cont">
+                                        <i class="fas fa-sync-alt "></i>
+                                        <i class="fas fa-comment-alt"></i>
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </div>
+                                </div>
+
+                            </div>     
+                            <div class="col-12 allert-span pt-3">
+                                <i class="fas fa-bell-slash "></i>
+                                <span class="mx-2">Ricevi notifiche di nuovi messaggi</span>
+                                
+                            </div>
+                            <div class="col-12 user-search">
+                                <i class="fas fa-search px-2"></i>
+                                <input type="text" placeholder="Cerca o inizia una nuova chat">
+                            </div>
+                            <div class="col-12">
+                                <ul>
+                                    <li>michele</li>
+                                    <li>fabio</li>
+                                    <li>samuele</li>
+                                    <li>luisa</li>                                   
+                                </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="col-8 message-aside">
-                        <div class="row">
-                            <h6>
-                                Nome utente
-                                <i class="fas fa-search"></i>
-                                <i class="fas fa-paperclip"></i>
-                                <i class="fas fa-ellipsis-v"></i>
 
-                            </h6>
-                        </div>
+                    <!-- aside right -->
+                    <div class="col-8 message-aside-container">
+                        <div class="row ">
+                            <div class="col-12 message-aside">
+                                <div class="row justify-content-between">
+                                    <div class="col-10 mt-2">
+                                        <div class="container-img">
+                                            <img src="./img/avatar_1.jpg" alt="">
+                                        </div>
+                                        <span class="mx-2">Nome utente</span>
+                                    </div>
+                                    <div class="col-2 icons-cont mt-2">
+                                        <i class="fas fa-search"></i>
+                                        <i class="fas fa-paperclip"></i>
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 ">
+                                <div class="row bottom-bar">
+                                    <div class="col-1 icons-mess">
+                                        <i class="far fa-smile"></i>
+                                    </div>
+                                    <div class="col-10 text-mess">
+                                        <input type="text" placeholder="Cerca o inizia una nuova chat">
+                                    </div>
+                                    <div class="col-1 icons-mess">
+                                        <i class="fas fa-microphone"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+
                     </div>
-
                 </div>
             </div>
         </div>
