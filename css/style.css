@@ -1,0 +1,23 @@
+.user-aside{
+    background-color: aqua;
+    height: 80vh;
+}
+.user-aside h6{
+    background-color: gray;
+    height: 70px;
+    border-right: 1px black solid;
+    margin-bottom: 0;
+}
+.allert-span{
+    background-color: rgb(94, 195, 226);
+    height: 80px;
+
+}
+.message-aside{
+    background-color: blue;
+    height: 80vh;
+}
+.message-aside h6{
+    background-color: gray;
+    height: 70px;
+}
