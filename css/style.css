@@ -67,7 +67,8 @@
 }
 .user-list ul>li{
     width: 100%;
-    border: 1px black solid;
+    border: 1px rgb(170, 169, 169) solid;
+    cursor: pointer;
 }
 /* Aside right*/
 .message-aside-container{
@@ -75,6 +76,7 @@
     height: 80vh;
     border: 1px black solid;
     position: relative;
+    
 }
 
 .message-aside{
@@ -82,23 +84,33 @@
     height: 70px;
 }
 /* messaggi utenti */
+.prova{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end ;
+}
 .recived{
     border: 1px black solid;
     border-radius: 10px;
     padding:15px;
     width: 40%;
     margin-top: 10px;
-    background-color: rgb(60, 185, 102)
-    
+    background-color: rgb(255, 255, 255);
+     
 }
 .send{
     border: 1px black solid;
     padding:15px;
     width: 40%;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(60, 185, 102);
     border-radius: 10px;
     margin-top: 10px;
-
+    align-self: flex-end;
+}
+.send-data{
+    font-size: 10px;
+    color: rgb(0, 0, 0);
+    text-align: right;
 }
 .bottom-bar{
     height: 60px;
@@ -109,8 +121,10 @@
 }
 .text-mess input{
     height: 45px;
-    margin-top: 10px;
+    margin-top: 8px;
     width: 100%;
+    border-radius: 40px;
+    padding-left: 20px;
 }
 .icons-mess{
     display: flex;

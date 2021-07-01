@@ -90,7 +90,7 @@
                                 <input type="text" placeholder="Cerca o inizia una nuova chat">
                             </div>
                             <div class="col-12 user-list">
-                                <ul class="row mt-2">
+                                <ul class="row mt-3">
 
                                     <li v-for="(img,index) in contacts" @click="moveTo(index)">
                                         <div  class="container-img m-2">
@@ -124,26 +124,23 @@
                             </div>
 
                             <!-- messaggi utenti -->
-                            <div v-for="(message,index) in contacts[indexContacts].messages" class="col-12">
-                                <div :class="contactMessage(index)" >
+
+                            <div  class="col-12 prova">
+                                <div :class="contactMessage(index)" v-for="(message,index) in contacts[indexContacts].messages">
                                     <div>
                                         {{message.text}}
                                     </div>
+                                    <div class="send-data">{{message.date}}</div>
                                 </div>
                             </div>
-                            <!-- <div class="col-12">
-                                <div  class="text-message-2 send">
-                                    
-                                </div>
-                            </div> -->
-
+                            
                             <div class="col-12 bottom-bar">
                                 <div class="row ">
                                     <div class="col-1 icons-mess">
                                         <i class="far fa-smile"></i>
                                     </div>
                                     <div class="col-10 text-mess">
-                                        <input type="text" placeholder="Cerca o inizia una nuova chat">
+                                        <input type="text" placeholder="Scrivi un messaggio">
                                     </div>
                                     <div class="col-1 icons-mess">
                                         <i class="fas fa-microphone"></i>
