@@ -1,23 +1,122 @@
-.user-aside{
-    background-color: aqua;
-    height: 80vh;
+.bg-boolzapp{
+    background: linear-gradient(180deg, rgba(66,148,136,1) 10%, rgba(219,219,211,1) 10%);
+    background-repeat:no-repeat;
+    height: 100vh;
 }
-.user-aside h6{
+
+/* Aside left */
+.user-aside-container{
+    background-color: rgb(250, 251, 251);
+    height: 80vh;
+    border: 1px black solid;
+}
+.user-aside{
     background-color: gray;
     height: 70px;
-    border-right: 1px black solid;
     margin-bottom: 0;
 }
+.container-img{
+    width: 55px;
+    display: inline-block;
+    
+}
+.container-img img{
+    width: 100%;
+    border-radius: 50px;
+}
+.icons-cont{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+}
 .allert-span{
-    background-color: rgb(94, 195, 226);
+    background-color: rgb(77, 185, 221);
     height: 80px;
+    
+}
+.allert-span i{
+    font-size: 20px;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    background: white;
+    color: rgba(25, 157, 233,0.5);
+}
+.user-search{
+    border: 1px rgba(172, 170, 170,0.2) solid;
+    width: 97%;
+    background-color: rgb(245, 245, 245);
+    margin-top: 10px;
+}
+.user-search i{
+    width: 20px;
+    color: rgba(172, 170, 170,0.6);
 
 }
-.message-aside{
-    background-color: blue;
-    height: 80vh;
+.user-search input{
+    width: 90%;
+    margin-left: 14px;
+    border: none;
+    background-color: rgb(245, 245, 245);
+
 }
-.message-aside h6{
+.user-list ul{
+    list-style: none;
+    padding: 0;
+}
+.user-list ul>li{
+    width: 100%;
+    border: 1px black solid;
+}
+/* Aside right*/
+.message-aside-container{
+    background-image: url(../img/mine.jpg);
+    height: 80vh;
+    border: 1px black solid;
+    position: relative;
+}
+
+.message-aside{
     background-color: gray;
     height: 70px;
+}
+/* messaggi utenti */
+.recived{
+    border: 1px black solid;
+    border-radius: 10px;
+    padding:15px;
+    width: 40%;
+    margin-top: 10px;
+    background-color: rgb(60, 185, 102)
+    
+}
+.send{
+    border: 1px black solid;
+    padding:15px;
+    width: 40%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin-top: 10px;
+
+}
+.bottom-bar{
+    height: 60px;
+    background-color: gray;
+    position: absolute;
+    bottom: 0;
+
+}
+.text-mess input{
+    height: 45px;
+    margin-top: 10px;
+    width: 100%;
+}
+.icons-mess{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icons-mess i{
+    font-size: 25px;
 }
