@@ -1,5 +1,5 @@
 .bg-boolzapp{
-    background: linear-gradient(180deg, rgba(66,148,136,1) 10%, rgba(219,219,211,1) 10%);
+    background: linear-gradient(180deg, rgba(66,148,136,1) 15%, rgba(219,219,211,1) 15%);
     background-repeat:no-repeat;
     height: 100vh;
 }
@@ -65,9 +65,13 @@
     list-style: none;
     padding: 0;
 }
+.user-list ul>li:first-child{
+    border-top: 1px rgb(170, 169, 169) solid;
+
+}
 .user-list ul>li{
     width: 100%;
-    border: 1px rgb(170, 169, 169) solid;
+    border-bottom: 1px rgb(170, 169, 169) solid;
     cursor: pointer;
 }
 /* Aside right*/
@@ -89,8 +93,7 @@
     flex-direction: column;
     justify-content:flex-end ;
 }
-.recived{
-    border: 1px black solid;
+.received{
     border-radius: 10px;
     padding:15px;
     width: 40%;
@@ -99,7 +102,6 @@
      
 }
 .send{
-    border: 1px black solid;
     padding:15px;
     width: 40%;
     background-color: rgb(60, 185, 102);

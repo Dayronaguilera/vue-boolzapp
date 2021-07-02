@@ -73,7 +73,7 @@ new Vue(
                 },
                 {
                     name: 'Luisa',
-                    avatar: "./img/avatar_4.jpg",
+                    avatar: "./img/avatar_io.jpg",
                     visible: true,
                     messages: [
                         {
@@ -92,24 +92,52 @@ new Vue(
                 
             ],
             indexContacts:0,
-            indexMessages:0,
+            indexMessages:"",
             
         },
         methods: {
+            
             moveTo: function(index) {
                 this.indexContacts = index;
             },
-            contactMessage: function(index)
-            {   
+            contactMessage: function(index) {
+
                 const status = this.contacts[this.indexContacts].messages[index].status
                     if (status === 'sent') {
-                        return 'send'
+                        return 'send';
                     }else {
-                       return 'recived'
+                       return 'received';
                     }
             },
-        }
-    }
- );
+            getCurrentDateTime: function () {
+              
+                const dateTimeNow = dayjs();
+                return dateTimeNow.format("DD/MM/YYYY HH:mm:ss");
+                
+            },
+            sendMessage: function () {
+                
+                this.contacts[this.indexContacts].messages.push({
+                    date: this.getCurrentDateTime(),
+                    text: this.indexMessages,
+                    status: 'sent',
+                });
+
+                this.indexMessages = '';
+                // dopo 1 secondo, pushare una riposta.
+                setTimeout(() => {
+                    this.contacts[this.indexContacts].messages.push({
+                        date: this.getCurrentDateTime(),
+                        text: "ok",
+                        status: 'received',
+                    });
+                }, 1000);
+            }    
+
+
+        },
+    }    
+                
+);
   
 

@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="./css/style.css">
     <!-- libreria vue.js -->
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <!-- script generate data -->
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+
 
 </head>
 <body>
@@ -56,15 +59,15 @@
                 <div class="row">
 
                     <!-- aside left -->
-                    <div class="col-4 user-aside-container">
+                    <aside class="col-4 user-aside-container">
                         <div class="row justify-content-center">
                             <div class="col-12 user-aside">
                                 <div class="row justify-content-between">
                                     <div class="col-8 mt-2">
                                         <div class="container-img">
-                                            <img  src="img/avatar_io.jpg" alt="">
+                                            <img  src="img/avatar_8.jpg" alt="">
                                         </div>
-                                        <span class="mx-2">Nome utente</span>
+                                        <span class="mx-2">Dayron</span>
                                     </div>
                                     <div class="col-4 icons-cont">
                                         <i class="fas fa-sync-alt "></i>
@@ -102,7 +105,7 @@
                                 </ul>
                             </div>
                         </div>
-                    </div>
+                    </aside>
 
                     <!-- aside right -->
                     <div class="col-8 message-aside-container">
@@ -127,9 +130,7 @@
 
                             <div  class="col-12 prova">
                                 <div :class="contactMessage(index)" v-for="(message,index) in contacts[indexContacts].messages">
-                                    <div>
-                                        {{message.text}}
-                                    </div>
+                                    <div>{{message.text}}</div>
                                     <div class="send-data">{{message.date}}</div>
                                 </div>
                             </div>
@@ -140,7 +141,7 @@
                                         <i class="far fa-smile"></i>
                                     </div>
                                     <div class="col-10 text-mess">
-                                        <input type="text" placeholder="Scrivi un messaggio">
+                                        <input v-model="indexMessages" type="text" placeholder="Scrivi un messaggio"  @keyup.enter="sendMessage()">
                                     </div>
                                     <div class="col-1 icons-mess">
                                         <i class="fas fa-microphone"></i>
