@@ -30,6 +30,7 @@
     align-items: center;
     font-size: 20px;
 }
+
 .allert-span{
     background-color: rgb(77, 185, 221);
     height: 80px;
@@ -59,11 +60,14 @@
     margin-left: 14px;
     border: none;
     background-color: rgb(245, 245, 245);
-
+    outline: none;
 }
 .user-list ul{
     list-style: none;
     padding: 0;
+    overflow-y: scroll;
+    max-height: 40vh;
+
 }
 .user-list ul>li:first-child{
     border-top: 1px rgb(170, 169, 169) solid;
@@ -74,10 +78,13 @@
     border-bottom: 1px rgb(170, 169, 169) solid;
     cursor: pointer;
 }
+.user-list ul>li:hover{
+    background:rgba(212, 209, 209, 0.8);
+    
+}
 /* Aside right*/
 .message-aside-container{
     background-image: url(../img/mine.jpg);
-    height: 80vh;
     border: 1px black solid;
     position: relative;
     
@@ -88,10 +95,15 @@
     height: 70px;
 }
 /* messaggi utenti */
+.container-mess{
+    height: calc(73vh - 60px);
+    overflow-y: auto;
+}
 .prova{
     display: flex;
     flex-direction: column;
-    justify-content:flex-end ;
+    justify-content:flex-end;
+    
 }
 .received{
     border-radius: 10px;
@@ -99,6 +111,7 @@
     width: 40%;
     margin-top: 10px;
     background-color: rgb(255, 255, 255);
+    margin-bottom: 15px;
      
 }
 .send{
@@ -127,6 +140,7 @@
     width: 100%;
     border-radius: 40px;
     padding-left: 20px;
+    outline: none;
 }
 .icons-mess{
     display: flex;
